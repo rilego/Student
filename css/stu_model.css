@@ -1,0 +1,147 @@
+/* 教师登陆模块--学生信息表 */
+.stu_table {
+	min-height: 650px;
+	/* text-align: center; */
+}
+
+.stu_table h2 img {
+	margin-bottom: -5px;
+	margin-right: 15px;
+
+}
+
+.stu_table .info_img {
+	width: 100%;
+	height: 118px;
+	margin: auto 0;
+	overflow: hidden;
+}
+
+.stu_table h2 {
+	font-weight: normal;
+	padding-top: 10px;
+	margin-left: 104px;
+}
+
+.stu_table hr {
+	width: 230px;
+	border: none;
+	border-top: 2px solid #EA6563;
+	margin: 5px 30px;
+}
+
+.add {
+	margin: 10px 185px;
+}
+
+.add a {
+	color: #EA6563;
+	font-size: 1.2em;
+}
+
+.stu_table .hr {
+	margin-left: 535px;
+}
+
+/* 课程添加 */
+
+.stu_course {
+	min-height: 650px;
+	/* text-align: center; */
+}
+
+.stu_course h2 img {
+	margin-bottom: -5px;
+	margin-right: 15px;
+
+}
+
+.stu_course .info_img {
+	width: 100%;
+	height: 118px;
+	margin: auto 0;
+	overflow: hidden;
+}
+
+.stu_course h2 {
+	font-weight: normal;
+	padding-top: 10px;
+	margin-left: 104px;
+}
+
+.stu_course hr {
+	width: 230px;
+	border: none;
+	border-top: 2px solid #EA6563;
+	margin: 5px 30px;
+}
+
+/* 信息登记页面 */
+
+.stu_course_table {
+	margin: 20px 300px;
+}
+
+.stu_course_table span {
+	margin-left: 30px;
+	font-family: "宋体";
+}
+
+.stu_course_table td {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 350px;
+	margin: 8px;
+	padding: 6px;
+}
+
+.stu_course_table td label {
+	background: #EDEDEF;
+	display: block;
+	overflow: hidden;
+}
+
+.stu_course_table td label input {
+	border: none;
+	background: transparent;
+	width: 227px;
+	height: 40px;
+	/* float: left; */
+	padding-left: 10px;
+	outline: 0;
+}
+
+.stu_course_table td label span {
+	font-size: 12px;
+	line-height: 40px;
+	/* padding-left: 20px; */
+}
+
+.stu_course_table .stu_course_table_1 p {
+	margin: 10px 10px;
+}
+
+.stu_course_table textarea {
+	width: 740px;
+	height: 100px;
+	border: none;
+	background: transparent;
+	margin: 20px;
+	outline: 0;
+	margin-top: 0px;
+
+}
+
+.stu_course_table .button {
+	width: 784px;
+	line-height: 40px;
+	border:1px solid #c3c3c3;
+	background:  #EDEDEF;
+	outline: 0;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	border-radius:5px;
+}
+
+/* 院系添加页面css */

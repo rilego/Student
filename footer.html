@@ -1,0 +1,112 @@
+<div id="LoginBox">
+		<form action="./Admin/check_login.php" method="post">
+			   <div class="row1">
+	            登录学生成绩管理|<a href="./zhuce.php">注册</a><a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">×</a>
+	        </div>
+	        <div class="row">
+	            用户名: <span class="inputBox">
+	            <input type="text" id="txtName" name="username" placeholder="学号（学生）|用户名（教师）" />
+	            </span><a href="javascript:void(0)" title="提示" class="warning" id="warn">*</a>
+	        </div>
+	        <div class="row">
+	            密&nbsp;&nbsp;&nbsp;码: <span class="inputBox">
+	                <input type="text" id="txtPwd" name="password" placeholder="密码" />
+	            </span><a href="javascript:void(0)" title="提示" class="warning" id="warn2">*</a>
+	        </div>
+	        <div class="row">
+	           <label><input type="radio" name="class_id" id="input_xuesheng" value="学生" checked=""><span>学生</span></label>
+	           <label><input type="radio" name="class_id" id="input_id" value="教师"><span>教师</span></label>
+	        </div>
+	        <div class="row">
+	            <input type="submit" name="" id="loginbtn" value="登陆">
+	            <input type="reset" name="" id="loginbtn_reset" value="重置">
+	        </div>
+		</form>
+    </div>
+	<script type="text/javascript">
+	$(function ($) {
+		//弹出登录
+		$("#example").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.6'
+			}, 1000);
+		}).on('click', function () {
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+		});
+		//
+		//按钮的透明度
+		$("#loginbtn").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.8'
+			}, 1000);
+		});
+		//文本框不允许为空---按钮触发
+		$("#loginbtn").on('click', function () {
+			var txtName = $("#txtName").val();
+			var txtPwd = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$(".warning").css({ display: 'block' });
+				}
+				else {
+					$("#warn").css({ display: 'block' });
+					$("#warn2").css({ display: 'none' });
+				}
+			}
+			else {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$("#warn").css({ display: 'none' });
+					$(".warn2").css({ display: 'block' });
+				}
+				else {
+					$(".warning").css({ display: 'none' });
+				}
+			}
+		});
+		//文本框不允许为空---单个文本触发
+		$("#txtName").on('blur', function () {
+			var txtName = $("#txtName").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn").css({ display: 'block' });
+			}
+			else {
+				$("#warn").css({ display: 'none' });
+			}
+		});
+		$("#txtName").on('focus', function () {
+			$("#warn").css({ display: 'none' });
+		});
+		//
+		$("#txtPwd").on('blur', function () {
+			var txtName = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn2").css({ display: 'block' });
+			}
+			else {
+				$("#warn2").css({ display: 'none' });
+			}
+		});
+		$("#txtPwd").on('focus', function () {
+			$("#warn2").css({ display: 'none' });
+		});
+		//关闭
+		$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+			$("#LoginBox").fadeOut("fast");
+			$("#mask").css({ display: 'none' });
+		});
+	});
+	</script>	
+<footer>
+		<p class="new-world">长江大学计科院计科11403班</p>
+		<p class="back-to-top">@版权所有：小灰灰Qi</p>
+</footer>
